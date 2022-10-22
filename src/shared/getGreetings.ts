@@ -1,3 +1,4 @@
+// TODO 修改一下问候文案
 export const getGreetings = (): string => {
 	const hour: number = new Date().getHours()
 
