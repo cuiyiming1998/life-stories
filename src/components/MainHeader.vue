@@ -34,6 +34,8 @@
 
 	const { currentYear, currentTime, gonePercent } = useCurrentTime()
 
-	const { poetry, run: getP } = usePoetry()
+	const { poetry, run: getP } = usePoetry({
+    onLoad: (res) => console.log(res)
+  })
 	const getPoetries = debounce(getP, 200)
 </script>

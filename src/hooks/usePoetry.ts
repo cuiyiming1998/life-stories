@@ -8,31 +8,38 @@ interface Origin {
 	translate: string[]
 }
 
+interface Detail {
+  id: string
+  content: string
+  popularity: string
+  origin: Origin
+  matchTags: string[]
+  recommendedReason: string
+  cacheAt: string
+}
+
 export interface PoetryData {
 	status: string
-	data: {
-		id: string
-		content: string
-		popularity: string
-		origin: Origin
-		matchTags: string[]
-		recommendedReason: string
-		cacheAt: string
-	}
+	data: Detail
 	token: string
 	ipAddress: string
 }
 
-export const usePoetry = (onLoad?: (res: PoetryData) => any) => {
+interface Options {
+  onLoad?: (res: Detail) => any
+}
+
+export const usePoetry = (options?: Options) => {
 	const poetry = ref<string>()
 	const poetryName = ref<string>()
 	const author = ref<string>()
 	const run = () => {
 		poetries.load((res: PoetryData): void => {
-			poetry.value = res.data.content
-			poetryName.value = res.data.origin.title
-			author.value = res.data.origin.author
-			onLoad && onLoad(res)
+      const { data } = res
+			poetry.value = data.content
+			poetryName.value = data.origin.title
+			author.value = data.origin.author
+      options?.onLoad && options.onLoad(data)
 		})
 	}
 	run()
