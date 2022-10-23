@@ -1,5 +1,4 @@
 import { getConvertedDateString, getGoneTimesPercent } from '@/shared/time'
-import { Ref } from 'vue'
 
 /**
  * description
