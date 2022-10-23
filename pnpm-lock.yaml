@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@ant-design/icons-vue': ^6.1.0
   '@types/lodash-es': ^4.17.6
   '@types/node': ^17.0.8
   '@vitejs/plugin-vue': 3.0.0
@@ -26,6 +27,7 @@ specifiers:
   vue-tsc: ^1.0.8
 
 dependencies:
+  '@ant-design/icons-vue': 6.1.0_vue@3.2.25
   '@vueuse/core': 7.5.3_vue@3.2.25
   ant-design-vue: 3.3.0-beta.3_vue@3.2.25
   lodash-es: 4.17.21

@@ -27,12 +27,15 @@ export const usePoetry = (onLoad?: (res: PoetryData) => any) => {
 	const poetry = ref<string>()
 	const poetryName = ref<string>()
 	const author = ref<string>()
-	poetries.load((res: PoetryData) => {
-		poetry.value = res.data.content
-		poetryName.value = res.data.origin.title
-		author.value = res.data.origin.author
-		onLoad && onLoad(res)
-	})
+	const run = () => {
+		poetries.load((res: PoetryData): void => {
+			poetry.value = res.data.content
+			poetryName.value = res.data.origin.title
+			author.value = res.data.origin.author
+			onLoad && onLoad(res)
+		})
+	}
+	run()
 
-	return { poetry, poetryName, author }
+	return { poetry, poetryName, author, run }
 }
