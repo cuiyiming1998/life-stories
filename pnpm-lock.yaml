@@ -9,6 +9,7 @@ specifiers:
   animate.css: ^4.1.1
   ant-design-vue: ^3.3.0-beta.3
   autoprefixer: ^10.4.2
+  jinrishici: ^1.0.6
   lodash-es: ^4.17.21
   pinia: ^2.0.9
   postcss: ^8.4.5
@@ -40,6 +41,7 @@ devDependencies:
   '@vitejs/plugin-vue-jsx': 2.0.1_vite@3.0.0+vue@3.2.25
   animate.css: 4.1.1
   autoprefixer: 10.4.2_postcss@8.4.5
+  jinrishici: 1.0.6
   postcss: 8.4.5
   sass: 1.55.0
   tailwindcss: 3.0.12_ef48b3b8837f8a23677bffe8f9cd866d
@@ -1726,6 +1728,10 @@ packages:
 
   /isarray/2.0.5:
     resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==}
+    dev: true
+
+  /jinrishici/1.0.6:
+    resolution: {integrity: sha512-4Bk5VHo6xg9DspGS8y8I7D6kftA6DYy4rSvwpdtxFvh9DidXMgf+NSZKAXrcLTi8S5NjqmwkpAKYPHXRURH64Q==}
     dev: true
 
   /js-tokens/4.0.0:
