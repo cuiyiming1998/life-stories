@@ -13,7 +13,7 @@
         class="w-5 h-5 cursor-pointer"
         @click="handleToggleTheme"
       />
-      <icon-github class="w-5 h-5 cursor-pointer" />
+      <icon-github class="w-5 h-5 cursor-pointer" @click="gotoGithub" />
     </div>
     <h1 class="text-5xl text-gray-600">Life Stories</h1>
     <h1 class="text-2xl text-gray-400">{{ greetings }} {{ name }}</h1>
@@ -30,7 +30,6 @@
     >
       {{ poetry }}
     </div>
-    <a-button type="primary">我是按钮</a-button>
   </main>
 </template>
 
@@ -69,4 +68,8 @@
 
   const { poetry, run: getP } = usePoetry()
   const getPoetries = debounce(getP, 200)
+
+  const gotoGithub = () => {
+    window.open(appStore.github)
+  }
 </script>
