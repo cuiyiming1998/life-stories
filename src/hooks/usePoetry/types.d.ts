@@ -1,10 +1,9 @@
-
 interface Origin {
-	title: string
-	dynasty: string
-	author: string
-	content: string[]
-	translate: string[]
+  title: string
+  dynasty: string
+  author: string
+  content: string[]
+  translate: string[]
 }
 
 interface Detail {
@@ -18,10 +17,10 @@ interface Detail {
 }
 
 export interface PoetryData {
-	status: string
-	data: Detail
-	token: string
-	ipAddress: string
+  status: string
+  data: Detail
+  token: string
+  ipAddress: string
 }
 
 export interface Options {
