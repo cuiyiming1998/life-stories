@@ -1,5 +1,5 @@
 <template>
-  <router-view></router-view>
+  <router-view />
 </template>
 
 <script lang="ts" setup></script>
@@ -8,6 +8,6 @@
   #app {
     min-height: 100vh;
     min-width: 100vw;
-    background-color: $background-color;
+    background-color: var(--background-base);
   }
 </style>

@@ -2,6 +2,7 @@ import '@/assets/tw.css'
 import App from './App.vue'
 import router from './router'
 import ArcoVueIcon from '@arco-design/web-vue/es/icon'
+import '@arco-design/web-vue/dist/arco.css'
 import 'animate.css'
 import '@/styles/index.scss'
 

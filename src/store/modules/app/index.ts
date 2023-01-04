@@ -8,10 +8,12 @@ const useAppStore = defineStore('app', {
     toggleTheme(dark: boolean) {
       if (dark) {
         this.theme = 'dark'
-        document.body.setAttribute('arco-theme', 'dark')
+        document.documentElement.classList.add('dark') // tailwind
+        document.body.setAttribute('arco-theme', 'dark') // arco
       } else {
         this.theme = 'light'
-        document.body.removeAttribute('arco-theme')
+        document.documentElement.classList.remove('dark') // tailwind
+        document.body.removeAttribute('arco-theme') // arco
       }
     }
   }

@@ -3,29 +3,33 @@
     class="cursor-default flex flex-col justify-center items-start pt-4 pb-20 px-20 animate__animated animate__fadeIn animate__faster"
   >
     <div class="w-full mb-16 flex justify-end items-center gap-x-4">
-      <icon-sun
-        v-if="theme === 'dark'"
-        class="w-5 h-5 cursor-pointer"
+      <div
+        class="text-xl cursor-pointer text-gray-600 dark:text-gray-100"
         @click="handleToggleTheme"
-      />
-      <icon-moon
-        v-else
-        class="w-5 h-5 cursor-pointer"
-        @click="handleToggleTheme"
-      />
-      <icon-github class="w-5 h-5 cursor-pointer" @click="gotoGithub" />
+      >
+        <icon-sun-fill v-if="theme === 'dark'" />
+        <icon-moon-fill v-else />
+      </div>
+      <div
+        class="text-xl cursor-pointer text-gray-600 dark:text-gray-100"
+        @click="gotoGithub"
+      >
+        <icon-github />
+      </div>
     </div>
-    <h1 class="text-5xl text-gray-600">Life Stories</h1>
-    <h1 class="text-2xl text-gray-400">{{ greetings }} {{ name }}</h1>
-    <div class="text-2xl text-gray-300">
+    <h1 class="text-5xl text-gray-600 dark:text-gray-300">Life Stories</h1>
+    <h1 class="text-2xl text-gray-400 dark:text-gray-300">
+      {{ greetings }} {{ name }}
+    </h1>
+    <div class="text-2xl text-gray-300 dark:text-gray-400">
       {{ currentTime }}
     </div>
-    <div class="text-2xl text-gray-300 mt-2">
+    <div class="text-2xl text-gray-300 mt-2 dark:text-gray-400">
       {{ currentYear }}年 已过
       {{ gonePercent }}
     </div>
     <div
-      class="text-5xl text-gray-700 mt-4 cursor-pointer"
+      class="text-5xl mt-4 cursor-pointer dark:text-white"
       @click="getPoetries"
     >
       {{ poetry }}
@@ -73,3 +77,5 @@
     window.open(appStore.github)
   }
 </script>
+
+<style lang="scss" scoped></style>

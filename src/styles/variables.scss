@@ -1,2 +1,8 @@
 // $background-color: #FFFEFA;
-$background-color: #f7f4ed;
+body {
+  --background-base: #f7f4ed;
+}
+
+body[arco-theme='dark'] {
+  --background-base: #1e131d;
+}
