@@ -1,8 +1,13 @@
 <template>
-  <router-view />
+  <Nav />
+  <main>
+    <router-view />
+  </main>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  import Nav from '@/components/Nav.vue'
+</script>
 
 <style lang="scss">
   #app {
