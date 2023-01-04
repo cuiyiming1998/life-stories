@@ -5,6 +5,8 @@ import ArcoVueIcon from '@arco-design/web-vue/es/icon'
 import '@arco-design/web-vue/dist/arco.css'
 import 'animate.css'
 import '@/styles/index.scss'
+import settings from './config/settings'
+import './mock'
 
 const pinia = createPinia()
 
