@@ -12,5 +12,5 @@ export const getGoneTimesPercent = (): string => {
 
   const percent =
     ((currentTime - startTime) / (currentYearTime - startTime)) * 100
-  return `${percent}%`
+  return `${percent.toFixed(3)}%`
 }
