@@ -6,10 +6,11 @@ import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import { ArcoResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
+import { pagesConfig } from './src/config/pagesConfig'
 
 export default defineConfig({
   plugins: [
-    Pages(),
+    Pages({ ...pagesConfig }),
     Components({
       resolvers: [ArcoResolver()]
     }),
