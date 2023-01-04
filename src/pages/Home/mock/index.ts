@@ -6,12 +6,15 @@ setupMock({
   setup() {
     Mock.mock(new RegExp('/api/home/events'), () => {
       const data = Mock.mock({
+        code: 0,
+        msg: '请求成功',
+        timestamp: 1111,
         'data|4-6': [
           {
-            'id|+1': nanoid(),
+            id: nanoid(),
             time: '@date(yyyy-MM-dd HH:mm:ss)',
-            'shortcuts|1-3': '@paragraph(1, 15)',
-            'tags|1-2': '@sentence(5)'
+            shortcuts: '@sentence(5)',
+            'tags|1-3': ['@sentence']
           }
         ]
       })

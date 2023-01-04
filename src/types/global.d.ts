@@ -47,6 +47,14 @@ declare global {
   function parseInt(s: string | number, radix?: number): number
 
   function parseFloat(string: string | number): number
+
+  interface BasicResponseModel<T = any> {
+    code: number
+    msg: string
+    data: T
+    success: boolean
+    timestamp?: number
+  }
 }
 
 // vue

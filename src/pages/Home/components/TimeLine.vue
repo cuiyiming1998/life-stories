@@ -24,6 +24,15 @@
   </main>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  import { useRequest } from 'vue-request'
+  import { getTimeLine } from '@/api/home'
+
+  const { data } = useRequest(getTimeLine, {
+    onSuccess(res) {
+      console.log(res)
+    }
+  })
+</script>
 
 <style lang="scss" scoped></style>

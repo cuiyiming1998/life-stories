@@ -32,7 +32,7 @@
   import { useCurrentTime } from '@/hooks/useCurrentTime'
   import { usePoetry } from '@/hooks/usePoetry'
   import { useDebounceFn } from '@vueuse/core'
-  import settings from '@/config/settings.json'
+  import settings from '@/config/settings'
 
   const user = useUserStore()
   const { name } = storeToRefs(user)
