@@ -12,5 +12,7 @@
     min-height: 100vh;
     min-width: 100vw;
     background-color: var(--background-base);
+    display: flex;
+    flex-flow: column;
   }
 </style>
