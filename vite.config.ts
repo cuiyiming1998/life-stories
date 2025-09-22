@@ -15,7 +15,26 @@ export default defineConfig({
       resolvers: [ArcoResolver()]
     }),
     AutoImport({
-      imports: ['vue', '@vueuse/core', 'pinia', 'vue-router'],
+      imports: [
+        'vue',
+        {
+          '@vueuse/core': [
+            // 只导入需要的函数，避免与Vue核心函数冲突
+            'useStorage',
+            'useLocalStorage',
+            'useSessionStorage',
+            'useMouse',
+            'useWindowSize',
+            'useEventListener',
+            'useClipboard',
+            'useTitle',
+            'useDark',
+            'useToggle'
+          ]
+        },
+        'pinia',
+        'vue-router'
+      ],
       dts: './auto-imports.d.ts',
       eslintrc: {
         enabled: true, // Default `false`
@@ -34,8 +53,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/styles/variables.scss";`,
-        javascriptEnabled: true
+        additionalData: `@use "./src/styles/variables.scss" as *;`,
+        silenceDeprecations: ['legacy-js-api']
       }
     }
   }
