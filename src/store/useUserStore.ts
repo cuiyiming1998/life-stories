@@ -1,6 +1,6 @@
 export const useUserStore = defineStore('user', {
   state: () => ({
-    name: 'Young',
+    name: localStorage.getItem('user-name') || '',
     github: 'https://github.com/cuiyiming1998'
   })
 })

@@ -3,8 +3,6 @@ import vue from 'eslint-plugin-vue'
 import typescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 import vueParser from 'vue-eslint-parser'
-import prettier from 'eslint-plugin-prettier'
-import prettierConfig from 'eslint-config-prettier'
 import globals from 'globals'
 
 export default [
@@ -26,11 +24,9 @@ export default [
       }
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      prettier: prettier
+      '@typescript-eslint': typescript
     },
     rules: {
-      'prettier/prettier': 'error',
       'no-case-declarations': 'off',
       'no-constant-condition': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',

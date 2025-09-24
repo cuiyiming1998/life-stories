@@ -3,8 +3,19 @@
     <h1 class="text-4xl md:text-5xl text-gray-600 dark:text-gray-300">
       {{ settings.projectName }}
     </h1>
-    <h1 class="text-xl md:text-2xl text-gray-400 dark:text-gray-300">
-      {{ greetings }} {{ name }}
+    <h1
+      class="text-xl md:text-2xl text-gray-400 dark:text-gray-300 flex items-center"
+    >
+      <span>{{ greetings }} &nbsp;&nbsp;</span>
+      <span v-if="name" class="underline">
+        {{ name }}
+      </span>
+      <a-input
+        v-else
+        ref="customInput"
+        allow-clear
+        :style="{ width: '320px' }"
+      ></a-input>
     </h1>
     <p class="text-xl md:text-2xl text-gray-300 dark:text-gray-400">
       {{ currentTime }}
@@ -20,7 +31,8 @@
         class="cursor-pointer animate__animated animate__fadeInRight"
         @click="getPoetries"
       >
-        {{ poetry }}
+        <!-- {{ poetry }} -->
+        123
       </span>
     </p>
   </header>
@@ -33,6 +45,7 @@
   import { usePoetry } from '@/hooks/usePoetry'
   import { useDebounceFn } from '@vueuse/core'
   import settings from '@/config/settings'
+  import { ref } from 'vue'
 
   const user = useUserStore()
   const { name } = storeToRefs(user)
@@ -43,6 +56,8 @@
 
   const { poetry, run: getP } = usePoetry()
   const getPoetries = useDebounceFn(getP, 200)
+
+  const customInput = ref()
 </script>
 
 <style lang="scss" scoped></style>

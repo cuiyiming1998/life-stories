@@ -1,1 +1,19 @@
 @use './variables.scss' as *;
+
+input {
+  outline: none;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+input:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.arco-input-focus {
+  @extend .arco-input-wrapper !optional;
+  background-color: var(--color-fill-2) !important;
+  border: none !important;
+}
