@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts" setup>
-  import Header from './components/Header.vue'
-  import TimeLine from './components/TimeLine.vue'
+import Header from './components/Header.vue'
+import TimeLine from './components/TimeLine.vue'
 </script>
 
 <style lang="scss" scoped></style>

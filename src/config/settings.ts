@@ -1,6 +1,6 @@
 export default {
   theme: 'light',
-  projectName: 'Life Stories',
+  projectName: 'To Be Decided',
   github: 'https://github.com/cuiyiming1998/life-stories',
   mock: true,
   urlPrefix: '',

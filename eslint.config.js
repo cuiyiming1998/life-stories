@@ -28,6 +28,7 @@ export default [
     },
     rules: {
       'no-case-declarations': 'off',
+      indent: ['error', 2],
       'no-constant-condition': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
@@ -35,9 +36,8 @@ export default [
       'no-prototype-builtins': 'warn',
       'vue/multi-word-component-names': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
-
       'no-extra-boolean-cast': 'off',
-      'no-unused-vars': 'off',
+      'no-unused-vars': 'warn',
       'no-undef': 'off'
     }
   },
@@ -53,5 +53,4 @@ export default [
       'no-undef': 'off'
     }
   },
-  prettierConfig
 ]
